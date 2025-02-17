@@ -6,8 +6,9 @@ const tripsController = require('../controllers/trips');
 
 //define route
 router.route("/trips")
-    //.route('trips')
-    .get(tripsController.tripsList);
+    .get(tripsController.tripsList) //GET method, routes tripList
+    .post(tripsController.tripsAddTrip) //POST method, enables adding trips.
+    .put(tripsController.tripsUpdateTrip); //PUT method, enables updating a single trip.
 
 
 router.route('/trips/:tripCode').get(tripsController.tripsFindByCode);
