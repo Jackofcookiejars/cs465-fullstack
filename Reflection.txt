@@ -1,0 +1,56 @@
+-Compare and contrast the types of frontend development you used in your full stack project.
+
+In this project, Express HTML, AngularJS, and JavaScript were all used to create the Travlr website.
+Throughout, I decided on a few things. First, JS is very useful when you aren't attempting stricter
+usage of OOP systems. With how flexible the methods and variables are, usage feels like a natural
+conversation. However, the converse of that means that unless you heavily implement KISS and split off
+your methods frequently, it'll be hard to understand what a large chunk of code does at a glance.
+HTML on the otherhand is static by design and intention. This means that without using code injection
+systems, anyone who can even barely understand it quickly grasps what each segment of HTML is supposed
+to do. In this project, HTML was primarily used as a style guide and definition set rather than anything
+more concrete. JavaScript primarily handled the writing of the HTML output, simply because of how much
+dynamic data there was. Because of Javascript writing out html, a web browser could function as an
+interface for a single-page administration application for Travlr with an authorization webhook.
+
+-Why did the backend use a NoSQL MongoDB database?
+
+For this answer, I am uncertain. If it was directly mentioned I have forgotten, however I'm fairly
+certain it's due to MongoDB's quick read/write speed in comparison to SQL forks. SQL uses rollbacks on
+failed inserts, so when multiple updates or inserts are queued data has a high-loss potential. Mongo
+minimizes that whilst being easier to scale.
+
+-How is JSON different from Javascript...
+
+Simple to answer, JSON isn't a coding language. In brief, JSON or JavaScript Object Notation, is a
+schema for simple and secure storage of information. It's an object notation, it stores data. Because
+JSON stores data, it can easily be interfaced with by programs which reads data.
+
+-Provide instances in...
+
+This particular section is asking on how organized the code is. Simply put, earlier in this reflection I
+mentioned using smaller sections of code that get implemented to better enhance readability. The project
+instructions primarily managed where and when I would do that unfortunately. However, due to the robust
+nature of the instructions, the most I would have otherwise split off would have been seperating out the
+input/output sections of the API into their own small classes in an attempt to simplify the routing.
+
+-Explain your understanding of methods, endpoints, and security in a full stack application.
+
+Okay, this is a doozy. First, like all security, hardening access points against bad actors is a must.
+Second, authentication in the program is handled through a cookie, which is dangerous still, but works.
+Thirdly, the cookie is handed out based on a successful username/password combination. The instructions
+wanted me to give specifically "bad username/bad password" out, instead of a combination. This flies
+against what I learned about security which is always give everyone the minimum necessary information
+possible. In this case, I decided to combine the two into a single denial along the lines of "That
+combination of username/password does not exist, try again." Finally, the methods were hardened to check
+if that cookie passed through authentication. Using authentication at every attempted step is a good
+security practice, seeing as how it is a minimal addition to time processing, and greatly enhances
+the security of the project.
+
+-How has this course helped you in reaching your professional goals? What skills have you learned,
+-developed, or mastered in this course to help you become a more marketable candidate in your career field?
+
+In brief, this course has given me the necessary skills to build websites. Those skills are always in demand
+and seeing as how my goal for my learning is to get a career where I can program, I'll be very proud of having
+those skills.
+
+
